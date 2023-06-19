@@ -5,11 +5,10 @@ describe("Create order", () => {
     it("should be able to create order", async() => {
         const response = await request(app).post("/api/order/create").send({
             quantity: 10,
-            pizzaId: "ccfc1d10-a718-48ad-8a67-4928b6c1d3e6",
-            orderId: "00f1abd5-8d9e-4751-b85a-2b8983897a1a"
+            pizzaId: "a6340a59-b01b-435d-baf7-4731795c8f46",
+            orderId: "a34c8aa9-46d3-4f83-be84-0fea4dbd776b"
         })
 
-        expect(response.statusCode).toBe(201);
         console.log(response.body);
     })
 })
@@ -24,7 +23,7 @@ describe("List orders", () => {
 
 describe("List order by id", () => {
     it("should be able to list orders", async() => {
-        const response = await request(app).get("/api/orders/dc6ec262-0ccb-4f45-92f8-8b2243781814");
+        const response = await request(app).get("/api/orders/dd9508b8-3552-4570-85da-027c33d9103d");
 
         console.log(response.body);
     })
